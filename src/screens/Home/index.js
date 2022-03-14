@@ -11,7 +11,7 @@ export default Home = () => {
     return(
         <SafeAreaView style={styles.container}>
             <Text>
-                Home
+                Homecsss
             </Text>
         </SafeAreaView>
     )
