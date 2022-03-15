@@ -11,20 +11,20 @@ export default Home = () => {
 
     return(
         <SafeAreaView style={styles.container}>
-            <View>
+            <View style={styles.rowContent}>
                <View>
-                   <Pressable onPress={() => console.log('home')}>
+                   <Pressable style={styles.buttonContent} onPress={() => console.log('home')}>
                        <Text>Home 1</Text>
                    </Pressable>
-                   <Pressable>
+                   <Pressable style={styles.buttonContent}>
                        <Text>Home 2</Text>
                    </Pressable>
                </View>
                <View>
-                   <Pressable>
+                   <Pressable style={styles.buttonContent}>
                        <Text>Home 3</Text>
                    </Pressable>
-                   <Pressable>
+                   <Pressable style={styles.buttonContent}>
                        <Text>Home 4</Text>
                    </Pressable>
                </View>
