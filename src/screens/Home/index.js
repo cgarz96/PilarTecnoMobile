@@ -4,30 +4,31 @@ import {
     View, 
     Text,
     Pressable,
-    ImageBackground
+    ImageBackground,
+    ToastAndroid 
 } from 'react-native';
 import { styles } from './styles'
 
-export default Home = () => {
+export default Home = (props) => {
 
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground style={styles.mainContent} source={require('../../assets/patterns/fondo.jpg')}>
                 <View style={styles.rowContent}>
                     <View>
-                        <Pressable style={styles.buttonContent} onPress={() => console.log('home')}>
-                            <Text>Home 1</Text>
+                        <Pressable style={styles.buttonContent} onPress={() => ToastAndroid.show('Ya te encuentras en Home', ToastAndroid.SHORT)}>
+                            <Text>Home</Text>
                         </Pressable>
-                        <Pressable style={styles.buttonContent}>
-                            <Text>Home 2</Text>
+                        <Pressable style={styles.buttonContent} onPress={() => props.navigation.navigate('List')}>
+                            <Text>List</Text>
                         </Pressable>
                     </View>
                     <View>
-                        <Pressable style={styles.buttonContent}>
-                            <Text>Home 3</Text>
+                        <Pressable style={styles.buttonContent} onPress={() => props.navigation.navigate('Maps')}>
+                            <Text>Maps</Text>
                         </Pressable>
-                        <Pressable style={styles.buttonContent}>
-                            <Text>Home 4</Text>
+                        <Pressable style={styles.buttonContent} onPress={() => props.navigation.navigate('Profile')}>
+                            <Text>Profile</Text>
                         </Pressable>
                     </View>
                 </View>
